@@ -1,0 +1,50 @@
+*Week 1 Planning:*
+
+- Implement and test encoding function to initialize first population of individuals (Arturo, Cesar, Tim)
+- Devise ranking system and possible cross-over strategies for evolutionary algorithm (Badr, Lukas)
+
+*Week 2 Planning:*
+
+- Fill the selection and crossover method (Lukas and Badr)
+- Implement Heisenberg, transverse Ising, magnetization (Tim)
+- Plot best energy per generation vs ground state energy (by numpy diagonalization) (Cesar)
+- Identify relevant parameters to vary and benchmark (Everyone)
+- Modify mutation implementation (Arturo)
+
+Future Work:
+- Investigate energy vs. # of qubits, depth or quantum volume
+- Define a set of five (?) parameters and average each fitness over all such sets 
+
+*Week 3 Planning:*
+
+- Fix Transverse Field Ising Hamiltonian (done)
+- Write function to plot dependence of energy difference to ground state energy per hyperparameter -> Tim (done)
+- For Transverse Field Ising: Set J = -1 and num_qubits = 4, vary h from 0 to 3, obtain optimal energy and difference to ground state energy for each h -> Tim (first experiments done)
+- Write function to plot dependence of final (best) energy difference to transverse field strength -> Tim (done)
+- Improve Plot Design (potentially to include it in Final Presentation) -> Tim (plots can still be improved)
+- For each optimal ground state, plot Z magnetization for each transverse strength h in order to observe phase transition -> Tim (the routine is implemented, we need to think about the interpretation of magnetization)
+- optimize selection procedure 
+- optimize parameters ... -> Arturo, Cesar (done)
+    -- depth/quantum volume 
+    -- mutation rate 
+    -- num_circuits
+    -- num_generations
+    ... and plot dependencies of best energies per parameter
+- Compare results to paper sent by Tom 
+- Document code -> Arturo, Cesar
+
+Future Work:
+- Average iterations over multiple (three?) sets of parameters for rotations to define trade-off between overly reliance on single set of parameters, and full VQE solver for each circuit
+- experiment with generation-dependent mutation rate
+
+* Week 4 Planning:*
+
+- Use PyTorch (Other library) for hyperparameter optimisation -> Badr and Lukas
+- Add errorbars for the multiple hyperparameter plots -> César
+- README: detail how to run the code (requirements, functionalities,...) -> Arturo, César & Tim
+- (Experiment with generation-dependent mutation rate) -> Lukas DONE
+- Implement certain probability for entangled blocks. I.e. keep entanglement gate sequences with a certain probability p (a new hyperparameter), and optimise this parameter -> Arturo and Tim
+
+Future Work:
+- Add requirements.txt file
+- Clean code
